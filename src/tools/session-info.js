@@ -1,5 +1,4 @@
 export function setName(name) {
-  console.log(name)
   sessionStorage.setItem('name', name)
 }
 

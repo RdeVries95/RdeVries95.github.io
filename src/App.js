@@ -11,10 +11,10 @@ import FadeTransitionRouter from "./components/functional/fade-transition-router
 // Pages
 import IntroPage from './pages/intro/intro-view'
 import MoviePage from './pages/movie/movie-view'
-import LotrPage from './pages/lotr/lotr-view'
+import CocktailPage from './pages/cocktail/cocktail-view'
 import SandboxPage from './pages/sandbox/sandbox-view'
-import MemePage from './pages/meme/meme-view'
-import StartPage from './pages/start/start-view'
+import YodaPage from './pages/yoda/yoda-view'
+import HomePage from './pages/home/home-view'
 
 function App() {
   const [user, setUser] = useState(getName())
@@ -23,11 +23,11 @@ function App() {
     <UserContext.Provider value={user}>
       <FadeTransitionRouter>
           <IntroPage path={PATHNAMES.INTRO} setUser={setUser}/>
-          <PrivateRoute component={StartPage} path={PATHNAMES.START} />
+          <PrivateRoute component={HomePage} path={PATHNAMES.HOME} />
           <PrivateRoute component={MoviePage} path={PATHNAMES.MOVIE} />
-          <PrivateRoute component={LotrPage} path={PATHNAMES.LOTR} />
+          <PrivateRoute component={CocktailPage} path={PATHNAMES.COCKTAIL} />
           <PrivateRoute component={SandboxPage} path={PATHNAMES.SANDBOX} />
-          <PrivateRoute component={MemePage} path={PATHNAMES.MEME} />
+          <PrivateRoute component={YodaPage} path={PATHNAMES.YODA} />
       </FadeTransitionRouter>
     </UserContext.Provider>
   );

@@ -7,15 +7,15 @@ import PrimaryBtn from '../../primitives/buttons/primary-btn-view'
 
 // Endpoints
 
-const IntroForm = ({ handleSubmit, onChange }) => {
+const SimpleForm = ({ handleSubmit, onChange, label, id, btnTxt }) => {
   return (
     <Wrapper>
         <form onSubmit={handleSubmit}>
-            <Input required onChange={onChange} label="Your name" id="user-name" type="text" />
-            <PrimaryBtn>Continue</PrimaryBtn>
+            <Input required onChange={onChange} label={label} id={id} type="text" />
+            <PrimaryBtn>{btnTxt}</PrimaryBtn>
         </form>
     </Wrapper>
   )
 }
 
-export default IntroForm
+export default SimpleForm

@@ -4,13 +4,13 @@ import React from 'react';
 // Styled imports
 import {
     
-} from './meme-style'
+} from './home-style'
 
 // Components
 
 // Endpoints
 
-const MemePage = () => {
+const HomePage = () => {
 
     return ( 
         <>
@@ -18,4 +18,4 @@ const MemePage = () => {
      );
 }
  
-export default MemePage;
+export default HomePage;

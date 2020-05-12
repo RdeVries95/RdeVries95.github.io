@@ -1,8 +1,8 @@
 export const PATHNAMES = {
     INTRO: "/intro",
-    START: "/",
-    MEME: "/meme",
-    LOTR: "/lotr",
+    HOME: "/home",
+    YODA: "/yoda",
+    COCKTAIL: "/cocktail",
     MOVIE: "/movie",
     SANDBOX: "/sandbox",
   }

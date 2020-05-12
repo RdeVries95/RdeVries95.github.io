@@ -1,29 +1,29 @@
 // Architectural imports
 import React, { useState } from 'react'
-import { navigate } from "@reach/router"
+import { navigate } from '@reach/router'
 
 // Styled imports
 import { IntroText, H1, P, InnerWrapper } from './intro-style'
 
 // Components
 import Wrapper from '../../components/primitives/Wrapper'
-import IntroForm from '../../components/constructs/intro-form/intro-form-view'
+import SimpleForm from '../../components/constructs/simple-form/simple-form-view'
+
+import { setName } from '../../tools/session-info'
 
 // Content imports
-import { PATHNAMES } from "../../config/pathnames"
+import { PATHNAMES } from '../../config/pathnames'
 
 const IntroPage = ({ setUser }) => {
-    
-    const [name, setName] = useState('')
+  const [name, setUserName] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setName(name)
+    setUser(name)
+    navigate(PATHNAMES.HOME)
+  }
 
-        setUser(name)
-        navigate(PATHNAMES.START)
-    }
-
-    
   return (
     <Wrapper>
       <InnerWrapper>
@@ -41,7 +41,15 @@ const IntroPage = ({ setUser }) => {
             at the right.
           </P>
         </IntroText>
-        <IntroForm onChange={e => {setName(e.target.value)}} handleSubmit={handleSubmit} />
+        <SimpleForm
+          onChange={(e) => {
+            setUserName(e.target.value)
+          }}
+          handleSubmit={handleSubmit}
+          label="Your name"
+          btnTxt="Continue"
+          id="your-name"
+        />
       </InnerWrapper>
     </Wrapper>
   )
