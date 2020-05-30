@@ -1,8 +1,13 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Container = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 100px;
-    margin-top: 20px
-`
+import Column from "../../primitives/column";
+
+export const H1 = styled.h1`
+  margin: 0;
+`;
+
+export const P = styled.p``;
+
+export const StyledColumn = styled(Column)`
+  margin: 100px 0;
+`;

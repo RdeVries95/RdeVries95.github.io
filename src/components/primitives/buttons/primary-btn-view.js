@@ -1,18 +1,17 @@
 // Architectural imports
-import React from 'react'
-import Ripples from 'react-ripples'
+import React from "react";
+import Ripple from "./ripple";
 
 // Styled imports
-import {
-    StyledPrimaryButton
-} from './primary-btn-style'
+import { Button } from "./primary-btn-style";
 
 const PrimaryBtn = (props) => {
-    return ( 
-        <Ripples color="#fff" during={1400}>
-            <StyledPrimaryButton>{props.children}</StyledPrimaryButton>
-        </Ripples>
-     );
-}
- 
+  return (
+    <Button>
+      {props.children}
+      <Ripple />
+    </Button>
+  );
+};
+
 export default PrimaryBtn;

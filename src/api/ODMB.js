@@ -1,41 +1,42 @@
-import axios from 'axios'
+import axios from "axios";
 
 export default class OMDB {
   constructor() {
-    axios.defaults.baseURL = 'http://www.omdbapi.com/'
+    axios.defaults.baseURL = "http://www.omdbapi.com/";
   }
 
   searchMovie(search) {
     return axios
-      .get('', {
+      .get("", {
         params: {
-          apikey: '540dbdd3',
+          apikey: "540dbdd3",
           s: search,
-          type: 'movie',
+          type: "movie",
         },
       })
       .then((result) => {
-        return result
+        return result;
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   getMovie(id) {
     return axios
-      .get('', {
+      .get("", {
         params: {
-          apikey: '540dbdd3',
+          apikey: "540dbdd3",
           i: id,
-          type: 'movie',
+          type: "movie",
+          plot: "full",
         },
       })
       .then((result) => {
-        return result
+        return result;
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 }

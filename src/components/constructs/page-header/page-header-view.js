@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 
-import { Container } from './page-header-style'
+import { H1, P, StyledColumn } from "./page-header-style"
 
-const PageHeader = ({ header }) => {
-  
+const PageHeader = ({ title, subTitle }) => {
   return (
-    <Container>
-        <h1>{header}</h1>
-    </Container>
-  )
-}
+    <StyledColumn>
+      <H1>{title}</H1>
+      <P>{subTitle}</P>
+    </StyledColumn>
+  );
+};
 
-export default PageHeader
+export default PageHeader;

@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 
-// Components
-import Wrapper from '../../primitives/Wrapper'
-import Input from '../input/input-view'
-import PrimaryBtn from '../../primitives/buttons/primary-btn-view'
+import {
+  StyledForm,
+  StyledLabel,
+  StyledInput,
+  StyledPrimaryButton,
+} from "./simple-form-style";
 
-// Endpoints
+const SimpleForm = ({ onSubmit, label, buttonText, onChange }) => {
+  const inputEl = useRef(null);
 
-const SimpleForm = ({ handleSubmit, onChange, label, id, btnTxt }) => {
+  useEffect(() => {
+    inputEl.current.focus();
+  })
+
   return (
-    <Wrapper>
-        <form onSubmit={handleSubmit}>
-            <Input required onChange={onChange} label={label} id={id} type="text" />
-            <PrimaryBtn>{btnTxt}</PrimaryBtn>
-        </form>
-    </Wrapper>
-  )
-}
+    <StyledForm onSubmit={onSubmit}>
+      <StyledLabel>{label}</StyledLabel>
+      <StyledInput onChange={onChange} ref={inputEl} required></StyledInput>
+      <StyledPrimaryButton type="submit">{buttonText}</StyledPrimaryButton>
+    </StyledForm>
+  );
+};
 
-export default SimpleForm
+export default SimpleForm;

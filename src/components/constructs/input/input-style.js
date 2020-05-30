@@ -7,6 +7,6 @@ export const Label = styled.label`
     margin-bottom: 5px;
 `
 
-export const InputWrapper = styled.label`
+export const InputWrapper = styled.div`
     
 `

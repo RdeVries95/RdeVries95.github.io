@@ -1,44 +1,24 @@
 import styled from "styled-components";
 
+import Column from "../../components/primitives/column";
+import Row from "../../components/primitives/row";
 import SimpleForm from "../../components/constructs/simple-form/simple-form-view";
-import { Card } from "../../components/primitives/card/card-style";
+import BackButton from "../../components/constructs/back-button/back-button-view"
 
-import { QuoteAltLeft } from "@styled-icons/boxicons-solid/QuoteAltLeft";
-import { QuoteAltRight } from "@styled-icons/boxicons-solid/QuoteAltRight";
+export const StyledColumn = styled(Column)``;
 
-export const YodaImg = styled.img`
-  width: 600px;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  margin-left: -50px;
-`;
+export const StyledRow = styled(Row)``;
 
-export const YodaContainer = styled(Card)`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 75%;
-  margin-top: 80px;
-`;
-
-export const TranslationContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
+export const StyledBackButton = styled(BackButton)`
 `;
 
 export const StyledSimpleForm = styled(SimpleForm)``;
 
-export const StyledTextOutput = styled.div`
-  margin-top: 30px;
-`;
-
-export const QuoteLeft = styled(QuoteAltLeft)`
-  width: 30px;
-`;
-
-export const QuoteRight = styled(QuoteAltRight)`
-  width: 30px;
+export const Response = styled.div`
+  max-width: 700px;
+  border: 2px solid black;
+  font-size: 32px;
+  margin-top: 100px;
+  padding: 20px;
+  font-family: StarWarsFont;
 `;
