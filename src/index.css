@@ -23,10 +23,9 @@ label {
   font-weight: 600;
   font-size: 12px;
   color: #aaaaaa;
-  margin-bottom: 5px;
 }
 
-input {
+input[type="text"] {
   height: 30px;
   outline: none;
   width: 250px;
@@ -38,6 +37,12 @@ input {
   line-height: 1.42857143;
   font-size: 14px;
   margin-top: 7.5px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 button {

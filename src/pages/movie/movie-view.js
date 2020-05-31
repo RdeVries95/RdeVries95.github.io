@@ -1,5 +1,5 @@
 // Architectural imports
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Styled imports
 import {
@@ -23,15 +23,15 @@ const MoviePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [movieId, setMovieId] = useState(null);
 
-  let api;
+  let api = useRef(null);
 
   useEffect(() => {
-    api = new OMDB();
+    api.current = new OMDB();
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await api.searchMovie(search);
+    const result = await api.current.searchMovie(search);
     setResponse(result.data.Search);
   };
 
@@ -63,6 +63,7 @@ const MoviePage = () => {
                 />
               );
             }
+            return null;
           })}
         </PosterContainer>
       ) : null}

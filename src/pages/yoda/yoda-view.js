@@ -1,5 +1,5 @@
 // Architectural imports
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Styled imports
 import {
@@ -19,15 +19,15 @@ const YodaPage = () => {
   const [text, setText] = useState("");
   const [response, setResponse] = useState("");
 
-  let api;
+  let api = useRef(null);
 
   useEffect(() => {
-    api = new Yoda();
+    api.current = new Yoda();
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await api.convertToYoda(text);
+    const result = await api.current.convertToYoda(text);
     if (result === 429) {
       setResponse("Too many requests, there have been.");
     } else {
@@ -45,7 +45,7 @@ const YodaPage = () => {
           setText(e.target.value);
         }}
         buttonText="Convert"
-        label="Enter your text"
+        label="Enter a sentence"
       />
       {response ? <Response>{response}</Response> : null}
     </StyledColumn>

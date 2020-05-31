@@ -1,11 +1,10 @@
 // Architectural imports
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Modal from "react-modal";
 
 // Styled imports
 import {
   MovieTitle,
-  Description,
   StyledColumn,
   StyledButton,
   ButtonContainer,
@@ -45,13 +44,13 @@ const MovieModal = ({ isOpen, setIsOpen, movieId }) => {
   const [plot, setPlot] = useState();
   const [genre, setGenre] = useState();
 
-  let api;
+  let api = useRef(null);
 
   useEffect(() => {
-    api = new OMDB();
+    api.current = new OMDB();
 
     async function fetchData() {
-      const result = await api.getMovie(movieId);
+      const result = await api.current.getMovie(movieId);
       setTitle(result.data.Title);
       setPlot(result.data.Plot);
       setGenre(result.data.Genre);

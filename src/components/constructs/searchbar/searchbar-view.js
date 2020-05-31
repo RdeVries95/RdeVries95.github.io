@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from "react";
 
 import {
   StyledForm,
-  StyledLabel,
   StyledInput,
   StyledPrimaryButton,
-} from "./simple-form-style";
+} from "./searchbar-style";
 
-const SimpleForm = ({ onSubmit, label, buttonText, onChange }) => {
+const SearchBar = ({ onSubmit, buttonText, onChange }) => {
   const inputEl = useRef(null);
 
   useEffect(() => {
@@ -16,11 +15,10 @@ const SimpleForm = ({ onSubmit, label, buttonText, onChange }) => {
 
   return (
     <StyledForm onSubmit={onSubmit}>
-      <StyledLabel>{label}</StyledLabel>
       <StyledInput type="text" onChange={onChange} ref={inputEl} required></StyledInput>
       <StyledPrimaryButton type="submit">{buttonText}</StyledPrimaryButton>
     </StyledForm>
   );
 };
 
-export default SimpleForm;
+export default SearchBar;
