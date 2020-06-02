@@ -8,7 +8,18 @@ export default class Cocktails {
   async getCocktail(params) {
     try {
       const result = await axios
-        .get("/search.php", params);
+        .get("/search.php", {params});
+      return result;
+    }
+    catch (error) {
+      return error.response.status;
+    }
+  }
+
+  async getCocktailById(params) {
+    try {
+      const result = await axios
+        .get("/lookup.php", {params});
       return result;
     }
     catch (error) {

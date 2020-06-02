@@ -27,11 +27,17 @@ const YodaPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await api.current.convertToYoda(text);
-    if (result === 429) {
-      setResponse("Too many requests, there have been.");
+    const count = text.split(' ').length;
+    console.log(count)
+    if (count > 1) {
+      const result = await api.current.convertToYoda(text);
+      if (result === 429) {
+        setResponse("Too many requests, there have been.");
+      } else {
+        setResponse(result.data.contents.translated);
+      }
     } else {
-      setResponse(result.data.contents.translated);
+      setResponse("You should enter more words.");
     }
   };
 

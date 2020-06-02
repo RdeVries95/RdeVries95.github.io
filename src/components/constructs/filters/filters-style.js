@@ -7,4 +7,6 @@ export const StyledRow = styled(Row)`
   width: 50px;
 `;
 
-export const StyledColumn = styled(Column)``;
+export const StyledColumn = styled(Column)`
+  margin-top: 50px;
+`;

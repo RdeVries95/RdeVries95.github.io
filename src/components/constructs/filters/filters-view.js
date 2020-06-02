@@ -2,14 +2,20 @@ import React from "react";
 
 import { StyledColumn } from "./filters-style";
 
-import CustomCheckbox from "../custom-checkbox/custom-checkbox-view"
+import CustomCheckbox from "../custom-checkbox/custom-checkbox-view";
 
-const Filters = ({ filters, handleFilter, objectKey }) => {
+const Filters = ({ addOrDelete, filters, objectKey, filterTitle }) => {
   return (
     <StyledColumn>
-      {filters.map((filter) => {
+      <h3>{filterTitle}</h3>
+      {filters.map((checkbox, index) => {
         return (
-          <CustomCheckbox onClick={() => {handleFilter(filter[objectKey], objectKey)}} label={filter.strCategory}/>
+          <CustomCheckbox
+            key={index}
+            addOrDelete={addOrDelete}
+            label={checkbox[objectKey]}
+            objectKey={objectKey}
+          />
         );
       })}
     </StyledColumn>

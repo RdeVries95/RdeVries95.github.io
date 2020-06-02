@@ -29,3 +29,11 @@ export const PosterContainer = styled.div`
   grid-template-columns: 450px 450px;
   margin-top: 100px;
 `;
+
+export const Response = styled.div`
+  max-width: 700px;
+  border: 2px solid black;
+  font-size: 32px;
+  margin-top: 100px;
+  padding: 20px;
+`;

@@ -8,6 +8,7 @@ import {
   Poster,
   StyledBackButton,
   PosterContainer,
+  Response,
 } from "./movie-style";
 
 // Components
@@ -22,6 +23,7 @@ const MoviePage = () => {
   const [response, setResponse] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [movieId, setMovieId] = useState(null);
+  const [error, setError] = useState(false);
 
   let api = useRef(null);
 
@@ -31,8 +33,13 @@ const MoviePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(false)
     const result = await api.current.searchMovie(search);
-    setResponse(result.data.Search);
+    if (result.data.Error) {
+      setError(true)
+    } else {
+      setResponse(result.data.Search);
+    }
   };
 
   const handleClick = async (id) => {
@@ -43,7 +50,7 @@ const MoviePage = () => {
   return (
     <StyledColumn>
       <StyledBackButton />
-      <PageHeader title="Search for a movie" />
+      <PageHeader title="Search a movie" />
       <StyledSimpleForm
         onSubmit={(e) => handleSubmit(e)}
         onChange={(e) => {
@@ -67,6 +74,7 @@ const MoviePage = () => {
           })}
         </PosterContainer>
       ) : null}
+      {error ? <Response>No movies found</Response> : null}
       <MovieModal isOpen={isOpen} setIsOpen={setIsOpen} movieId={movieId} />
     </StyledColumn>
   );
