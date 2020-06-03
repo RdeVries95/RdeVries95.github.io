@@ -36,7 +36,7 @@ const Table = ({ tableColumns, tableData, onClick }) => {
           {rows.map((row, i) => {
             prepareRow(row);
             return (
-              <TR onClick={onClick} {...row.getRowProps()}>
+              <TR onClick={() => {onClick(row.original.idDrink)}} {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
                     <TD {...cell.getCellProps()}>{cell.render("Cell")}</TD>

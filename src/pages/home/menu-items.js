@@ -1,7 +1,7 @@
 import yodaImage from "../../assets/images/yoda-image.jpg"
 import cocktailsImage from "../../assets/images/cocktail-image.jpg"
 import moviesImage from "../../assets/images/movies-image.jpg"
-import formsImage from "../../assets/images/forms-image.jpeg"
+import spotifyImage from "../../assets/images/spotify-image.jpg"
 
 import { PATHNAMES } from "../../config/pathnames"
 
@@ -23,8 +23,8 @@ export const menuItems = [
     link: PATHNAMES.MOVIE
   },
   {
-    menuTitle: "Forms",
-    image: formsImage,
-    link: PATHNAMES.FORMS
+    menuTitle: "Spotify",
+    image: spotifyImage,
+    link: PATHNAMES.SPOTIFY
   },
 ];

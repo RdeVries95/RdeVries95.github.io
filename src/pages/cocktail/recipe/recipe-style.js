@@ -4,6 +4,7 @@ import Column from "../../../components/primitives/column"
 import Row from "../../../components/primitives/row"
 
 export const StyledColumn = styled(Column)`
+    
 `;
 
 export const RecipeCard = styled(Row)`
@@ -23,4 +24,9 @@ export const UL = styled.ul`
 export const P = styled.p`
     padding: 0;
     margin: 0;
+    align: left;
+`
+
+export const Header = styled.h3`
+    
 `

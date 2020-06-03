@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "@reach/router";
 
 // Styled imports
-import { StyledColumn, RecipeCard, RecipeImage, UL, P } from "./recipe-style";
+import { StyledColumn, RecipeCard, RecipeImage, UL, P, Header } from "./recipe-style";
 
 // Components
 import PageHeader from "../../../components/constructs/page-header/page-header-view";
@@ -35,6 +35,7 @@ const RecipePage = () => {
       {cocktail ? (
         <RecipeCard>
           <StyledColumn>
+            <Header>Ingredients:</Header>
             <UL>
               {cocktail.data.drinks[0].strIngredient1 ? (
                 <li>{cocktail.data.drinks[0].strIngredient1}</li>
@@ -58,6 +59,7 @@ const RecipePage = () => {
                 <li>{cocktail.data.drinks[0].strIngredient7}</li>
               ) : null}
             </UL>
+            <Header>How to make:</Header>
             <P>{cocktail.data.drinks[0].strInstructions}</P>
           </StyledColumn>
           <RecipeImage src={cocktail.data.drinks[0].strDrinkThumb} />

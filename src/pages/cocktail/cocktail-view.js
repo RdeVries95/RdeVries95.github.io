@@ -46,7 +46,7 @@ const CocktailPage = () => {
   };
 
   const handleRowClick = (id) => {
-    navigate(`/cocktails/${id}`)
+    navigate(`/cocktail/${id}`)
   }
 
   return (

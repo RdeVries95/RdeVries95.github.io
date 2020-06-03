@@ -4,6 +4,5 @@ export const PATHNAMES = {
   YODA: "/yoda",
   COCKTAIL: "/cocktail",
   MOVIE: "/movie",
-  SANDBOX: "/sandbox",
-  FORM: "/forms",
+  SPOTIFY: "/spotify",
 };
