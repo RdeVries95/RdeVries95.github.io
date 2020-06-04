@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const StyledColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+import Column from "../../components/primitives/column";
+
+export const StyledColumn = styled(Column)``;
 
 export const StyledRow = styled.div`
   display: flex;
@@ -11,7 +10,11 @@ export const StyledRow = styled.div`
 `;
 
 export const StyledButton = styled.button`
-    :hover {
-        background-color: #1DB954;
-    }
-`
+  :hover {
+    background-color: #1db954;
+  }
+`;
+
+export const P = styled.p`
+    margin-top: 50px;
+`;

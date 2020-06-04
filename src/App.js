@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { PATHNAMES } from "./config/pathnames";
 import UserContext from "./config/user-context";
 import PrivateRoute from "./components/functional/private-route";
-import FadeTransitionRouter from "./components/functional/fade-transition-router";
+import FadeTransitionRouter from "./components/functional/fade-transition-router/fade-transition-router-view";
 
 // Pages
 import IntroPage from "./pages/intro/intro-view";
