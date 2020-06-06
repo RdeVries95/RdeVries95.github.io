@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a26ecbe4.chunk.css",
+    "main.js": "/static/js/main.17cef823.chunk.js",
+    "main.js.map": "/static/js/main.17cef823.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6a2302b0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6a2302b0.js.map",
+    "static/js/2.00a16e7c.chunk.js": "/static/js/2.00a16e7c.chunk.js",
+    "static/js/2.00a16e7c.chunk.js.map": "/static/js/2.00a16e7c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b535e857551ce11dcf481dd9e2e7454c.js": "/precache-manifest.b535e857551ce11dcf481dd9e2e7454c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a26ecbe4.chunk.css.map": "/static/css/main.a26ecbe4.chunk.css.map",
+    "static/js/2.00a16e7c.chunk.js.LICENSE.txt": "/static/js/2.00a16e7c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Starjedi.5c345b90.woff",
+    "static/media/about-image.jpg": "/static/media/about-image.67a9eb0c.jpg",
+    "static/media/cocktail-image.gif": "/static/media/cocktail-image.8697d933.gif",
+    "static/media/css3-logo.3707da3c.svg": "/static/media/css3-logo.3707da3c.svg",
+    "static/media/html5-logo.525f317f.svg": "/static/media/html5-logo.525f317f.svg",
+    "static/media/js-logo.87711407.svg": "/static/media/js-logo.87711407.svg",
+    "static/media/movie-image.gif": "/static/media/movie-image.f972a03f.gif",
+    "static/media/reactjs-logo.05a3e30f.svg": "/static/media/reactjs-logo.05a3e30f.svg",
+    "static/media/sass-logo.e0f651ac.svg": "/static/media/sass-logo.e0f651ac.svg",
+    "static/media/styled-components-logo.e79a42b9.svg": "/static/media/styled-components-logo.e79a42b9.svg",
+    "static/media/waving.gif": "/static/media/waving.49114955.gif",
+    "static/media/yoda-image.gif": "/static/media/yoda-image.d46c897e.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a2302b0.js",
+    "static/js/2.00a16e7c.chunk.js",
+    "static/css/main.a26ecbe4.chunk.css",
+    "static/js/main.17cef823.chunk.js"
+  ]
+}
