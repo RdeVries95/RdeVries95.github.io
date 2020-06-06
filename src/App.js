@@ -11,7 +11,7 @@ import FadeTransitionRouter from "./components/functional/fade-transition-router
 import IntroPage from "./pages/intro/intro-view";
 import MoviePage from "./pages/movie/movie-view";
 import CocktailPage from "./pages/cocktail/cocktail-view";
-import SpotifyPage from "./pages/spotify/spotify-view";
+import AboutPage from "./pages/about/about-view";
 import YodaPage from "./pages/yoda/yoda-view";
 import HomePage from "./pages/home/home-view";
 import RecipePage from "./pages/cocktail/recipe/recipe-view"
@@ -27,7 +27,7 @@ function App() {
         <PrivateRoute component={MoviePage} path={PATHNAMES.MOVIE} />
         <PrivateRoute component={CocktailPage} path={PATHNAMES.COCKTAIL} />
         <PrivateRoute component={RecipePage} path={`${PATHNAMES.COCKTAIL}/:cocktailId`} />
-        <PrivateRoute component={SpotifyPage} path={PATHNAMES.SPOTIFY} />
+        <PrivateRoute component={AboutPage} path={PATHNAMES.ABOUT} />
         <PrivateRoute component={YodaPage} path={PATHNAMES.YODA} />
       </FadeTransitionRouter>
     </UserContext.Provider>

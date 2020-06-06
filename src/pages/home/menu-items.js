@@ -1,30 +1,29 @@
-import yodaImage from "../../assets/images/yoda-image.jpg"
-import cocktailsImage from "../../assets/images/cocktail-image.jpg"
-import moviesImage from "../../assets/images/movies-image.jpg"
-import spotifyImage from "../../assets/images/spotify-image.jpg"
+import yodaImage from "../../assets/images/yoda-image.gif";
+import cocktailsImage from "../../assets/images/cocktail-image.gif";
+import moviesImage from "../../assets/images/movie-image.gif";
+import aboutImage from "../../assets/images/waving.gif";
 
-import { PATHNAMES } from "../../config/pathnames"
-
+import { PATHNAMES } from "../../config/pathnames";
 
 export const menuItems = [
   {
-    menuTitle: "Yoda",
-    image: yodaImage,
-    link: PATHNAMES.YODA
+    menuTitle: "About",
+    image: aboutImage,
+    link: PATHNAMES.ABOUT,
   },
   {
     menuTitle: "Cocktails",
     image: cocktailsImage,
-    link: PATHNAMES.COCKTAIL
+    link: PATHNAMES.COCKTAIL,
   },
   {
     menuTitle: "Movies",
     image: moviesImage,
-    link: PATHNAMES.MOVIE
+    link: PATHNAMES.MOVIE,
   },
   {
-    menuTitle: "Spotify",
-    image: spotifyImage,
-    link: PATHNAMES.SPOTIFY
+    menuTitle: "Yoda",
+    image: yodaImage,
+    link: PATHNAMES.YODA,
   },
 ];

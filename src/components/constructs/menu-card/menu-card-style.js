@@ -9,6 +9,7 @@ export const Card = styled.div`
   height: 250px;
   cursor: pointer;
   transition: 0.5s;
+  margin: 0 15px;
 
   :hover {
     background-image: url(${(props) => props.image});

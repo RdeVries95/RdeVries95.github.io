@@ -13,34 +13,20 @@ import { menuItems } from "./menu-items";
 // Tools/configs
 import UserContext from "../../config/user-context";
 
-// Endpoints
-
 const HomePage = () => {
-  const [firstTime, setFirstTime] = useState(false);
+  const [visit] = useState(sessionStorage.getItem("visit"))
   const user = useContext(UserContext);
 
-  const getTitle = () => {
-    if (firstTime) {
-      return `Nice to meet you, ${user}`;
-    } else {
-      return `What's next, ${user}?`;
-    }
-  };
-
-  const setVisits = () => {
-    let visits = sessionStorage.getItem("visited");
-    sessionStorage.setItem("visited", visits + 1);
-    if (visits <= 1) setFirstTime(true);
-  };
-
   useEffect(() => {
-    setVisits();
-  }, []);
+    sessionStorage.setItem("visit", visit + 1);
+  }, [visit]);
 
   return (
     <StyledColumn>
       <StyledPageHeader
-        title={getTitle()}
+        title={
+          visit < 1 ? `Nice to meet you, ${user}` : `What's next, ${user}?`
+        }
         subTitle="What would you like to do?"
       />
       <PrimaryMenu menuItems={menuItems} />

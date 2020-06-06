@@ -2,7 +2,7 @@
 import React from "react";
 
 // Styled imports
-import { StyledGrid } from "./primary-menu-style";
+import { StyledRow } from "./primary-menu-style";
 
 // Components
 import Card from "../menu-card/menu-card-view";
@@ -11,7 +11,7 @@ import Card from "../menu-card/menu-card-view";
 
 const PrimaryMenu = ({ menuItems }) => {
   return (
-    <StyledGrid>
+    <StyledRow>
       {menuItems.map((menuItem, index) => {
         return (
           <Card
@@ -22,7 +22,7 @@ const PrimaryMenu = ({ menuItems }) => {
           />
         );
       })}
-    </StyledGrid>
+    </StyledRow>
   );
 };
 
