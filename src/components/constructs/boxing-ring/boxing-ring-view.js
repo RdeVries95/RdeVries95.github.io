@@ -10,8 +10,6 @@ import {
   Row,
 } from "./boxing-ring-style";
 
-import Timer from "../timer/timer-view";
-
 import opponent from "../../../assets/images/opponents.jpg";
 
 const initialTime = 30 * 1000;
