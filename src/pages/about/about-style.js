@@ -13,8 +13,8 @@ export const StyledRow = styled.div`
 export const Description = styled.div`
   padding: 20px;
   border: 2px solid black;
-  width: 500px;
-  margin-left: 40px;
+  width: ${props => props.width};
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   align-content: center;
