@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default class Cocktails {
   constructor() {
-    axios.defaults.baseURL = "https://www.thecocktaildb.com/api/json/v1/1";
+    axios.defaults.baseURL = "//www.thecocktaildb.com/api/json/v1/1";
   }
 
   async getCocktail(params) {

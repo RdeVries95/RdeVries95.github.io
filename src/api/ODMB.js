@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default class OMDB {
   constructor() {
-    axios.defaults.baseURL = "http://www.omdbapi.com/";
+    axios.defaults.baseURL = "//www.omdbapi.com/";
   }
 
   searchMovie(search) {

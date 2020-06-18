@@ -3,7 +3,7 @@ import axios from "axios";
 export default class Yoda {
   constructor() {
     axios.defaults.baseURL =
-      "https://api.funtranslations.com/translate/yoda.json/";
+      "//api.funtranslations.com/translate/yoda.json/";
   }
 
   convertToYoda(text) {
