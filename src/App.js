@@ -14,7 +14,8 @@ import CocktailPage from "./pages/cocktail/cocktail-view";
 import AboutPage from "./pages/about/about-view";
 import YodaPage from "./pages/yoda/yoda-view";
 import HomePage from "./pages/home/home-view";
-import RecipePage from "./pages/cocktail/recipe/recipe-view"
+import RecipePage from "./pages/cocktail/recipe/recipe-view";
+import Page from "./pages/page/page-view";
 
 function App() {
   const [user, setUser] = useState(sessionStorage.getItem("user"));
@@ -26,9 +27,12 @@ function App() {
         <PrivateRoute component={HomePage} path={PATHNAMES.HOME} />
         <PrivateRoute component={MoviePage} path={PATHNAMES.MOVIE} />
         <PrivateRoute component={CocktailPage} path={PATHNAMES.COCKTAIL} />
-        <PrivateRoute component={RecipePage} path={`${PATHNAMES.COCKTAIL}/:cocktailId`} />
+        <PrivateRoute
+          component={RecipePage}
+          path={`${PATHNAMES.COCKTAIL}/:cocktailId`}
+        />
         <PrivateRoute component={AboutPage} path={PATHNAMES.ABOUT} />
-        <PrivateRoute component={YodaPage} path={PATHNAMES.YODA} />
+        <PrivateRoute component={Page} path={PATHNAMES.YODA} />
       </FadeTransitionRouter>
     </UserContext.Provider>
   );

@@ -13,7 +13,7 @@ export const StyledRow = styled.div`
 export const Description = styled.div`
   padding: 20px;
   border: 2px solid black;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
   margin-right: 40px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const P = styled.p`
 `;
 
 export const Image = styled.img`
-max-width: 400px;
+  max-width: 400px;
   object-fit: cover;
   border: 2px solid black;
 `;

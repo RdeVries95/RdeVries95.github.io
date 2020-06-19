@@ -2,12 +2,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  height: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -67,8 +62,8 @@ button:hover {
 }
 
 @font-face {
-  font-family: 'StarWarsFont';
-  src: url('./assets/fonts/Starjedi.woff') format('woff')
+  font-family: "StarWarsFont";
+  src: url("./assets/fonts/Starjedi.woff") format("woff");
 }
 
 .transition-group {
@@ -93,11 +88,11 @@ button:hover {
 }
 
 .fade-enter .page {
-  opacity: 0;
+  opacity: 1;
   z-index: 1;
 }
 
 .fade-enter.fade-enter-active .page {
   opacity: 1;
-  transition: opacity 450ms;
+  transition: opacity 450ms ease-in;
 }

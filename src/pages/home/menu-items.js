@@ -1,7 +1,7 @@
 import yodaImage from "../../assets/images/yoda-image.gif";
 import cocktailsImage from "../../assets/images/cocktail-image.gif";
 import moviesImage from "../../assets/images/movie-image.gif";
-import aboutImage from "../../assets/images/waving.gif";
+import aboutImage from "../../assets/images/about-image.gif";
 
 import { PATHNAMES } from "../../config/pathnames";
 
