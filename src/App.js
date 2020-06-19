@@ -15,7 +15,7 @@ import AboutPage from "./pages/about/about-view";
 import YodaPage from "./pages/yoda/yoda-view";
 import HomePage from "./pages/home/home-view";
 import RecipePage from "./pages/cocktail/recipe/recipe-view";
-import Page from "./pages/page/page-view";
+// import Page from "./pages/page/page-view";
 
 function App() {
   const [user, setUser] = useState(sessionStorage.getItem("user"));
@@ -32,7 +32,7 @@ function App() {
           path={`${PATHNAMES.COCKTAIL}/:cocktailId`}
         />
         <PrivateRoute component={AboutPage} path={PATHNAMES.ABOUT} />
-        <PrivateRoute component={Page} path={PATHNAMES.YODA} />
+        <PrivateRoute component={YodaPage} path={PATHNAMES.YODA} />
       </FadeTransitionRouter>
     </UserContext.Provider>
   );
